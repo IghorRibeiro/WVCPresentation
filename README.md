@@ -2,56 +2,58 @@
 
 **Ighor de Souza Ribeiro** (CIAA), **Rigel Procópio Fernandes** (DSAM)
 
-WVC 2026 — XXI Workshop de Visão Computacional
+WVC 2026 — XXI Workshop on Computer Vision
 
-**[Slides (PDF)](slides/WVC2026_slides.pdf)** · [Slides (PPTX)](slides/WVC2026_slides.pptx) · [Código e parâmetros](https://github.com/IghorRibeiro/yolo26n-seadronessee-postprocessing)
+**[Slides (PDF)](slides/WVC2026_slides_en.pdf)** · [Slides (PPTX)](slides/WVC2026_slides_en.pptx) · [Code and parameters](https://github.com/IghorRibeiro/yolo26n-seadronessee-postprocessing)
+
+Versão em português: [README.pt.md](README.pt.md) · [Slides (PDF)](slides/WVC2026_slides.pdf) · [Slides (PPTX)](slides/WVC2026_slides.pptx)
 
 ---
 
-## Slide 2 · O problema: alvos de poucos pixels
+## Slide 2 · The problem: targets of a few pixels
 
-<img src="media/slide02_problem.png" width="100%" alt="Imagem do SeaDronesSee com rótulos e o mesmo alvo em menos pixels">
+<img src="media/en/slide02_problem.png" width="100%" alt="SeaDronesSee image with labels and the same target in fewer pixels">
 
-Com o lado maior em 1280 px, a mediana do tamanho dos alvos é 16 px; nas life-saving appliances, 9,4 px.
+With the longer side at 1280 px, the median target size is 16 px; for life-saving appliances, 9.4 px.
 
-## Slide 5 · Duas heads, os mesmos pesos
+## Slide 5 · Two heads, the same weights
 
-<img src="media/slide05_heads.png" width="100%" alt="Head one-to-one sem NMS e head one-to-many com NMS">
+<img src="media/en/slide05_heads.png" width="100%" alt="One-to-one head without NMS and one-to-many head with NMS">
 
-A head one-to-one emite uma predição por objeto e dispensa NMS; a one-to-many gera vários candidatos e exige NMS.
+The one-to-one head outputs a single prediction per object and needs no NMS; the one-to-many head produces several candidates and needs NMS.
 
-## Slide 6 · Hard-NMS × Soft-NMS
+## Slide 6 · Hard-NMS vs. Soft-NMS
 
-<img src="media/slide06_nms.png" width="100%" alt="Exemplo ilustrativo de Hard-NMS e Linear Soft-NMS">
+<img src="media/en/slide06_nms.png" width="100%" alt="Illustrative example of Hard-NMS and linear Soft-NMS">
 
-Hard-NMS é tudo ou nada no limiar de IoU; o Soft-NMS linear reduz a confiança conforme a sobreposição (exemplo ilustrativo).
+Hard-NMS is all or nothing at the IoU threshold; linear Soft-NMS lowers the confidence with the overlap (illustrative example).
 
-## Slide 7 · SAHI e Flip + WBF
+## Slide 7 · SAHI and Flip + WBF
 
-<img src="media/sahi_sweep.gif" width="60%" alt="Varredura do quadro em tiles sobrepostos">
+<img src="media/sahi_sweep.gif" width="60%" alt="Frame swept by overlapping tiles">
 
-O SAHI processa tiles sobrepostos de 640 px em resolução nativa (cerca de 39 passes por imagem; grade ilustrativa). O Flip + WBF funde as caixas da imagem e do espelho (2 passes).
+SAHI processes overlapping 640-px tiles at native resolution (about 39 forward passes per image; illustrative grid). Flip + WBF fuses the boxes of the image and its mirror (2 passes).
 
-## Slide 10 · Custo × acurácia
+## Slide 10 · Cost vs. accuracy
 
-<img src="media/slide10_cost_accuracy.png" width="100%" alt="AP no val contra latência por imagem para as sete configurações a 1280 px">
+<img src="media/en/slide10_cost_accuracy.png" width="100%" alt="Validation AP against latency per image for the seven 1280-px configurations">
 
-Um passe com Linear Soft-NMS: 48,50 AP a 31 ms. Flip + WBF: 46,13 AP a 59 ms. SAHI: 31,17 a 37,38 AP a cerca de 760 ms.
+Single pass with linear Soft-NMS: 48.50 AP at 31 ms. Flip + WBF: 46.13 AP at 59 ms. SAHI: 31.17 to 37.38 AP at about 760 ms.
 
-## Slide 11 · Por que o SAHI perde? (hipótese)
+## Slide 11 · Why does SAHI lose? (hypothesis)
 
-<img src="media/slide11_sahi_hypothesis.png" width="100%" alt="Descasamento de escala entre o treino e os tiles do SAHI">
+<img src="media/en/slide11_sahi_hypothesis.png" width="100%" alt="Scale mismatch between training and SAHI tiles">
 
-Hipótese, não testada: nos tiles em resolução nativa os objetos aparecem cerca de 3× maiores que no treino, e não houve fine-tuning por tiles.
+Hypothesis, not tested: in native-resolution tiles the objects appear about 3× larger than in training, and no slicing-aided fine-tuning was applied.
 
-## Slide 13 · Teste oficial do SeaDronesSee
+## Slide 13 · Official SeaDronesSee test set
 
-<img src="media/slide13_official_test.png" width="100%" alt="AP e AP50 no servidor oficial">
+<img src="media/en/slide13_official_test.png" width="100%" alt="AP and AP50 on the official server">
 
-AP 45,90 → 50,01 e AP50 73,49 → 79,71 do Default (one-to-one, conf 0,25) para o Linear Soft-NMS; AP75 final de 52,53.
+AP 45.90 → 50.01 and AP50 73.49 → 79.71 from Default (one-to-one head, confidence 0.25) to linear Soft-NMS; final AP75 of 52.53.
 
-## Slide 14 · De onde vem o ganho?
+## Slide 14 · Where does the gain come from?
 
-<img src="media/slide14_gain_decomposition.png" width="100%" alt="Decomposição do ganho de AP no val">
+<img src="media/en/slide14_gain_decomposition.png" width="100%" alt="Decomposition of the validation AP gain">
 
-No val, dos 4,25 pontos: 2,54 vêm só do limiar de confiança (efeito de protocolo), 1,25 da head one-to-many com Hard-NMS e 0,46 do Soft-NMS.
+On validation, of the 4.25 points: 2.54 come only from the confidence threshold (a protocol effect), 1.25 from the one-to-many head with Hard-NMS and 0.46 from Soft-NMS.
