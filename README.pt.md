@@ -12,9 +12,9 @@ WVC 2026 — XXI Workshop de Visão Computacional
 
 ## Slide 2 · A responsabilidade SAR marítima do Brasil
 
-<img src="media/slide02_sar_responsibility.png" width="100%" alt="Mapa esquemático da Amazônia Azul e da área SAR marítima do Brasil">
+<img src="media/slide02_sar_responsibility.png" width="100%" alt="NAVAREA V (Brasil) entre a América do Sul e a África">
 
-A Amazônia Azul tem cerca de 5,7 milhões de km²; a área SAR marítima sob responsabilidade do Brasil tem cerca de 14,5 milhões de km², até 10°W (mapa esquemático, limites aproximados).
+A Amazônia Azul tem cerca de 5,7 milhões de km²; a área SAR marítima sob responsabilidade do Brasil tem cerca de 14,5 milhões de km², até 10°W (o mapa mostra a NAVAREA V, recorte do mapa de NAVAREAs da IMO/IHO; a área SAR vai mais a leste).
 
 ## Slide 3 · Busca no mar: navio × VANT
 

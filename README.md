@@ -12,9 +12,9 @@ Versão em português: [README.pt.md](README.pt.md) · [Slides (PDF)](slides/WVC
 
 ## Slide 2 · Brazil's maritime SAR responsibility
 
-<img src="media/en/slide02_sar_responsibility.png" width="100%" alt="Schematic map of the Blue Amazon and of Brazil's maritime SAR area">
+<img src="media/en/slide02_sar_responsibility.png" width="100%" alt="NAVAREA V (Brazil) between South America and Africa">
 
-The Blue Amazon covers about 5.7 million km²; the maritime SAR area under Brazil's responsibility is about 14.5 million km², out to 10°W (schematic map, approximate limits).
+The Blue Amazon covers about 5.7 million km²; the maritime SAR area under Brazil's responsibility is about 14.5 million km², out to 10°W (the map shows NAVAREA V, cropped from the IMO/IHO NAVAREA map; the SAR area extends farther east).
 
 ## Slide 3 · Searching at sea: ship vs. UAV
 
