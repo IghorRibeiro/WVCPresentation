@@ -12,15 +12,15 @@ WVC 2026 — XXI Workshop de Visão Computacional
 
 ## Slide 2 · A responsabilidade SAR marítima do Brasil
 
-<img src="media/slide02_sar_responsibility.png" width="100%" alt="NAVAREA V (Brasil) entre a América do Sul e a África">
+<img src="media/slide02_sar_responsibility.png" width="100%" alt="NAVAREA V (Brasil)">
 
-A Amazônia Azul tem cerca de 5,7 milhões de km²; a área SAR marítima sob responsabilidade do Brasil tem cerca de 14,5 milhões de km², até 10°W (o mapa mostra a NAVAREA V, recorte do mapa de NAVAREAs da IMO/IHO; a área SAR vai mais a leste).
+A Amazônia Azul® tem cerca de 5,7 milhões de km²; a área SAR marítima sob responsabilidade do Brasil tem cerca de 14,5 milhões de km², até 10°W (o mapa mostra a NAVAREA V; do Rio de Janeiro ao limite leste, em 20°W, são cerca de 1.280 MN ou 2.370 km).
 
 ## Slide 3 · Busca no mar: navio × VANT
 
 <img src="media/slide03_ship_vs_uav.png" width="100%" alt="Busca em quadrado crescente e velocidade de um navio-patrulha contra um VANT comercial">
 
-Numa busca em quadrado crescente, um VANT comercial a cerca de 20 m/s percorre as mesmas pernadas de 3 a 4 vezes mais rápido que um navio-patrulha a 10–12 nós.
+Numa busca em quadrado crescente, um VANT comercial a cerca de 21 m/s (DJI Mavic 3 Pro, velocidade máxima) percorre as mesmas pernadas de 3 a 4 vezes mais rápido que um navio-patrulha a 10–12 nós.
 
 ## Slide 4 · O problema: alvos de poucos pixels
 

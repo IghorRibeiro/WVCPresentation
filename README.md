@@ -12,15 +12,15 @@ Versão em português: [README.pt.md](README.pt.md) · [Slides (PDF)](slides/WVC
 
 ## Slide 2 · Brazil's maritime SAR responsibility
 
-<img src="media/en/slide02_sar_responsibility.png" width="100%" alt="NAVAREA V (Brazil) between South America and Africa">
+<img src="media/en/slide02_sar_responsibility.png" width="100%" alt="NAVAREA V (Brazil)">
 
-The Blue Amazon covers about 5.7 million km²; the maritime SAR area under Brazil's responsibility is about 14.5 million km², out to 10°W (the map shows NAVAREA V, cropped from the IMO/IHO NAVAREA map; the SAR area extends farther east).
+The Amazônia Azul® (Blue Amazon) covers about 5.7 million km²; the maritime SAR area under Brazil's responsibility is about 14.5 million km², out to 10°W (the map shows NAVAREA V; from Rio de Janeiro to its eastern limit, at 20°W, it is about 1,280 NM or 2,370 km).
 
 ## Slide 3 · Searching at sea: ship vs. UAV
 
 <img src="media/en/slide03_ship_vs_uav.png" width="100%" alt="Expanding square search and speed of a patrol vessel versus a commercial UAV">
 
-In an expanding square search, a commercial UAV at about 20 m/s flies the same legs 3 to 4 times faster than a patrol vessel at 10–12 knots.
+In an expanding square search, a commercial UAV at about 21 m/s (DJI Mavic 3 Pro, maximum speed) flies the same legs 3 to 4 times faster than a patrol vessel at 10–12 knots.
 
 ## Slide 4 · The problem: targets of a few pixels
 
